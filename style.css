@@ -1,0 +1,81 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+.pageWrapper {
+
+}
+
+.navContainer{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    height: 10vh;
+}
+
+.nav-wrapper{
+    box-shadow: 0px;
+    height: 10vh !important;
+}
+
+.bg-first {
+    background-color: #EADA68;
+}
+
+.black {
+    color: black;
+}
+
+.white {
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.medium{
+    font-size: 2em;
+}
+
+.big{
+    font-size: 5em;
+}
+
+#home {
+    height: 90vh;
+    background-color: #EADA68;
+    width: 100%;
+}
+
+.home-info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    height: 70%;
+}
+
+#home h1{
+    align-self: center;
+    width: 30%;
+    text-align: left;
+}
+
+#home img{
+    align-self: center;
+}
+
+.btn-contact{
+    padding: 30px;
+    border: 3px white solid;
+}
+
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+#services {
+    height: 30vh;
+}
