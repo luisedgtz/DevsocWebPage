@@ -190,3 +190,15 @@ nav{
     position: relative;
     background-color: #F4F4F4;
 }
+
+.services-types{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.services-types div p{
+    font-size: 1.3em;
+    width: 50%;
+    margin: auto;
+}
