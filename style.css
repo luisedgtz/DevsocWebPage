@@ -123,7 +123,7 @@ nav{
 
 .btn-contact a:hover{
     border: 3px solid #444444;
-    background-color: #EDD920;
+    background-color: #EADA68;
     padding: 30px;
     border-radius: 30px;
     padding: 40px;
@@ -150,6 +150,7 @@ nav{
 }
 
 #about{
+    top: 0;
     height: 80vh;
     text-align: center;
     position: relative;
@@ -185,7 +186,8 @@ nav{
 }
 
 #services{
-    height: 75vh;
+    top: -1px;
+    height: 85vh;
     text-align: center;
     position: relative;
     background-color: #F4F4F4;
@@ -202,3 +204,162 @@ nav{
     width: 50%;
     margin: auto;
 }
+
+#portfolio{
+    height: 40vh;
+    top: -1px;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.client-display{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.client-display img{
+    margin-top: 40px;
+    height: 100px;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+    transition: height 0.5s;
+}
+
+.client-display img:hover{
+    filter: grayscale(0%);
+    height: 110px;
+}
+
+#team{
+    height: 70vh;
+    top: -1px;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.us-display{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.img-display{
+    text-align: center;
+    width: 33%;
+}
+
+.us-img{
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    border-radius: 200px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.247);
+}
+
+.social-icons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 250px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.git-icon{
+    height: 50px;
+    width: 50px;
+    background-image: url(./Github_2.svg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.git-icon:hover{
+    height: 60px;
+    width: 60px;
+    background-image: url(./Github.svg);
+}
+
+.link-icon{
+    height: 50px;
+    width: 50px;
+    background-image: url(./Linkedin_2.svg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.link-icon:hover{
+    height: 60px;
+    width: 60px;
+    background-image: url(./Linkedin.svg);
+}
+
+.cv-icon{
+    height: 50px;
+    width: 50px;
+    background-image: url(./cv.svg);
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.cv-icon:hover{
+    height: 60px;
+    width: 60px;
+    background-image: url(./cv2.svg);
+}
+
+.diego{
+    background-image: url('./us2.jpg');
+    background-size: cover;
+    background-position-y: 50%;
+}
+
+.luis{
+    background-image: url('./us1.jpg');
+    background-size: cover;
+    background-position-x: 50%;
+}
+
+.alex{
+    background-image: url('./us3.jfif');
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 60%;
+}
+
+#contact{
+    height: 90vh;
+    top: -1px;
+    text-align: center;
+    position: relative;
+    background-color: #f0eee4d0;
+}
+
+#contact h2{
+    margin-top: 60px;
+}
+
+.contact-div{
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.input-field{
+    margin-top: 40px;
+}
+
+.btn-send{
+    background-color: #EADA68;
+    width: 50%;
+}
+
+.btn-send:hover{
+    background-color: #EADA68;
+}
+
