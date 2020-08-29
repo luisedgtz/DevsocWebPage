@@ -11,13 +11,47 @@
     <link rel='icon' href='favicon.ico' type='image/vnd.microsoft.icon' sizes="16x16"/>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init('user_ZOEd1rZDSkh1b1rN5p07x');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const templateId = "template_tLfW6zQE"
+
+                const textIn = document.getElementById('icon_prefix1').value;
+                const mailIn = document.getElementById('icon_prefix2').value;
+                const messageIn = document.getElementById('textarea1').value;
+
+                var templateParams = {
+                    from_name: String(textIn),
+                    message_html: String(messageIn),
+                    repply_to: String(mailIn),
+                }
+
+                emailjs.send('gmail',templateId,templateParams)
+                    .then(function(response){
+                        alert("Email send correctly, we will contact you soon")
+                        document.getElementById('icon_prefix1').value = '';
+                        document.getElementById('icon_prefix2').value = '';
+                        document.getElementById('textarea1').value = '';
+                    }, function(error) {
+                        alert("There was an error sending Email")
+                    });    
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="pageWrapper">
         <div class="navContainer" >
             <nav class="z-depth-0">
                 <div class="nav-wrapper bg-first">
-                  <a href="#" class="brand-logo"><img src="./Asset 1.svg" alt=""></a>
+                  <a href="#" class="brand-logo"><img src="./assets/Asset 1.svg" alt=""></a>
                   <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a class="dark-text bold" href="#home">Home</a></li>
                     <li><a class="dark-text bold" href="#about">About Us</a></li>
@@ -31,13 +65,13 @@
         </div>
         <div>
             <div id="home" class="section scrollspy">
-                <video autoplay muted loop id="myVideo" src="./videoBack.mp4"></video>
+                <video autoplay muted loop id="myVideo" src="./assets/videoBack.mp4"></video>
                 <div class="color-overlay"></div>
                 <h1 class="white-text bold big">We like to offer solutions</h1>
                 <div class="btn-contact">
                     <a href="#contact" class="bold medium">LET'S MAKE YOUR NEXT PROJECT</a>
                 </div>
-                <img class="illus" src="./Asset 9.svg" alt="">        
+                <img class="illus" src="./assets/Asset 9.svg" alt="">        
             </div>
             <div id="about" class="section scrollspy">
                 <div class="who">
@@ -49,12 +83,12 @@
                 </div>
                 <div class="info-about">                   
                     <div>
-                        <img src="./Asset 12.svg" alt="">
+                        <img src="./assets/Asset 12.svg" alt="">
                         <h4 class="bold first-text">Our mission</h4>
                         <p>Offer the best quality software solutions with accessible prices to help our community grow digitally</p>
                     </div>
                     <div>
-                        <img src="./Asset 13.svg" alt="">
+                        <img src="./assets/Asset 13.svg" alt="">
                         <h4 class="bold first-text">Our vision</h4>
                         <p>Be the leaders of a digitally connected society in which everyone has access to leading edge technology</p>
                     </div>
@@ -64,18 +98,18 @@
                 <h2 class="bold dark-text">Our services</h2>
                 <div class="services-types">
                     <div>
-                        <img src="./Asset 15.svg" height="300px" alt="">
+                        <img src="./assets/Asset 15.svg" height="300px" alt="">
                         <h4 class="bold first-text">Software Development</h4>
                         <p>Custom software solutions for every platform or environment</p>
                     </div>
                     <div>
-                        <img src="./Asset 16.svg" height="300px" alt="">
+                        <img src="./assets/Asset 16.svg" height="300px" alt="">
                         <h4 class="bold first-text">Web Development</h4>
                         <p>Custom software solutions for every platform or environment</p>
                     </div>
 
                     <div>
-                        <img src="./Asset 17.svg" height="300px" alt="">
+                        <img src="./assets/Asset 17.svg" height="300px" alt="">
                         <h4 class="bold first-text">App Development</h4>
                         <p>Custom software solutions for every platform or environment</p>
                     </div>
@@ -84,11 +118,11 @@
             <div id="portfolio" class="section scrollspy">
                 <h2 class="bold dark-text">We have worked with: </h2>
                 <div class="client-display">
-                    <img src="./client1.svg" alt="">
-                    <img src="./client3.svg" alt="">
-                    <img style="background-color: #5e5e5e; padding: 20px;" src="./client2.svg" alt="">
-                    <img src="./client4.svg" alt="">
-                    <img src="./client5.svg" alt="">
+                    <img src="./assets/client1.svg" alt="">
+                    <img src="./assets/client3.svg" alt="">
+                    <img style="background-color: #5e5e5e; padding: 20px;" src="./assets/client2.svg" alt="">
+                    <img src="./assets/client4.svg" alt="">
+                    <img src="./assets/client5.svg" alt="">
                 </div>
 
             </div>
@@ -138,25 +172,25 @@
                 <h2 class="dark-text bold">Contact us!</h2>
                 <h5 class="dark-text">And let's create something amazing</h5>
                 <div class="contact-div">
-                    <form action="">
+                    <form id="contact-form">
                         <div class="input-field">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix1" type="text" class="validate">
-                            <label for="icon_prefix1">First Name</label>
+                            <input required id="icon_prefix1" type="text" name="user_name" class="validate">
+                            <label for="icon_prefix1">Name</label>
                         </div>
 
                         <div class="input-field">
                             <i class="material-icons prefix">email</i>
-                            <input id="icon_prefix2" type="email" class="validate">
-                            <label for="icon_prefix2">First Name</label>
+                            <input required id="icon_prefix2" type="email" name="user_email" class="validate">
+                            <label for="icon_prefix2">email</label>
                         </div>
 
                         <div class="input-field">
                             <i class="material-icons prefix">edit</i>
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea required id="textarea1" class="materialize-textarea" name="message"></textarea>
                             <label for="textarea1">Message</label>
                         </div>
-                        <input class="btn-send waves-effect waves-light btn-large" type="submit" value="SEND">
+                        <input class="contact-btn" type="submit" value="SEND">
                     </form>
                 </div>
             </div>

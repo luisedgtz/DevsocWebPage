@@ -271,7 +271,7 @@ nav{
 .git-icon{
     height: 50px;
     width: 50px;
-    background-image: url(./Github_2.svg);
+    background-image: url(./assets/Github_2.svg);
     background-size: cover;
     transition: all 0.5s;
 }
@@ -279,13 +279,13 @@ nav{
 .git-icon:hover{
     height: 60px;
     width: 60px;
-    background-image: url(./Github.svg);
+    background-image: url(./assets/Github.svg);
 }
 
 .link-icon{
     height: 50px;
     width: 50px;
-    background-image: url(./Linkedin_2.svg);
+    background-image: url(./assets/Linkedin_2.svg);
     background-size: cover;
     transition: all 0.5s;
 }
@@ -293,13 +293,13 @@ nav{
 .link-icon:hover{
     height: 60px;
     width: 60px;
-    background-image: url(./Linkedin.svg);
+    background-image: url(./assets/Linkedin.svg);
 }
 
 .cv-icon{
     height: 50px;
     width: 50px;
-    background-image: url(./cv.svg);
+    background-image: url(./assets/cv.svg);
     background-size: cover;
     transition: all 0.5s;
 }
@@ -307,23 +307,23 @@ nav{
 .cv-icon:hover{
     height: 60px;
     width: 60px;
-    background-image: url(./cv2.svg);
+    background-image: url(./assets/cv2.svg);
 }
 
 .diego{
-    background-image: url('./us2.jpg');
+    background-image: url('./assets/us2.jpg');
     background-size: cover;
     background-position-y: 50%;
 }
 
 .luis{
-    background-image: url('./us1.jpg');
+    background-image: url('./assets/us1.jpg');
     background-size: cover;
     background-position-x: 50%;
 }
 
 .alex{
-    background-image: url('./us3.jfif');
+    background-image: url('./assets/us3.jfif');
     background-size: cover;
     background-position-x: 50%;
     background-position-y: 60%;
@@ -362,4 +362,57 @@ nav{
 .btn-send:hover{
     background-color: #EADA68;
 }
+
+.input-field .prefix.active {
+    color: #EADA68;
+  }
+  
+  .input-field label{
+    color: #444444;
+  }
+
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #EADA68 !important;
+    box-shadow: 0 1px 0 0 #EADA68 !important;
+  }
+  
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid #EADA68 !important;
+    box-shadow: 0 1px 0 0 #EADA68 !important;
+  }
+  
+  .input-field input[type=email]:focus + label {
+    color: #EADA68 !important;
+  }
+  
+  .input-field input[type=text]:focus + label {
+    color: #EADA68 !important;
+  }
+
+
+  .materialize-textarea:focus{
+    border-bottom: 1px solid #EADA68 !important;
+    box-shadow: 0 1px 0 0 #EADA68 !important;
+  }
+
+      .input-field input[type=text].valid {
+        border-bottom: 1px solid#EDD920;
+        box-shadow: 0 1px 0 0 #EDD920;
+      }
+      .input-field input[type=email].valid {
+        border-bottom: 1px solid #EDD920;
+        box-shadow: 0 1px 0 0 #EDD920;
+      }
+
+  .materialize-textarea:focus + label{
+    color: #EADA68 !important;
+  }
+
+  .contact-btn{
+      background-color: #EADA68;
+      border: none;
+      outline: none;
+      padding: 20px;
+      width: 40%;
+  }
 
